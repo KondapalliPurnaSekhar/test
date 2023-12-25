@@ -1,5 +1,5 @@
 # Create a Resource_Group 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg 1" {
   name     = "myTFResourceGroup"
   location = "westus2"
 }
