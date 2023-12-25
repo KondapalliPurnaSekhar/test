@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "rg1" {
 }
 
 # Create a virtual network
-resource "azurerm_virtual_network" "vnet" {
+resource "azurerm_virtual_network" "vnet1" {
   name                = "myTFVnet"
   address_space       = ["10.0.0.0/16"]
   location            = "West Europe"
