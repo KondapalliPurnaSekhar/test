@@ -1,14 +1,14 @@
 # Create a Resource_Group 
-resource "azurerm_resource_group" "rg1" {
+resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
-  location = "West Europe"
+  location = var.location
 }
 
 # Create a virtual network
-resource "azurerm_virtual_network" "vnet1" {
+resource "azurerm_virtual_network" "vnet" {
   name                = "myTFVnet"
   address_space       = ["10.0.0.0/16"]
-  location            = "West Europe"
-  resource_group_name = azurerm_resource_group.rg1.name
+  location            = var.location
+  resource_group_name = azurerm_resource_group.rg.name
 }
 
