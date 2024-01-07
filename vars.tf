@@ -6,3 +6,7 @@ variable "location" {
 variable "Resource_Group" {
   description = "resource group."
  }
+
+Variable "subnet" {
+description = "Sub_Net."
+}
