@@ -7,6 +7,6 @@ variable "Resource_Group" {
   description = "resource group."
  }
 
-Variable "subnet" {
+variable "subnet" {
 description = "Sub_Net."
 }
