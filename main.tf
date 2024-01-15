@@ -6,8 +6,9 @@ resource "azurerm_resource_group" "rg" {
 
 # Create a virtual network
 resource "azurerm_virtual_network" "vnet" {
-  name                = "myTFVnet"
-  address_space       = ["10.0.0.0/16"]
+  count               = 4
+  name                = "var.subnet-${count.index}"
+  address_space       = ["10.0.${count.index}.0/16"]
   location            = var.location
   resource_group_name = var.Resource_Group
 }
@@ -15,8 +16,9 @@ resource "azurerm_virtual_network" "vnet" {
 
 # Create a sub_net network
 resource "azurerm_subnet" "subnet" {
-  name                 = var.subnet
+  count                = 4
+  name                 = var.subnet-${count.index}
   resource_group_name  = var.Resource_Group
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = ["10.0.${count.index}.0/24"]
 }
