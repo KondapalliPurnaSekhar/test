@@ -1,4 +1,4 @@
-variable "location" {
+workvariable "location" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
 }
 
@@ -7,6 +7,6 @@ variable "Resource_Group" {
   description = "resource group."
  }
 
-variable "subnet" {
+variable "network" {
 description = "Sub_Net."
 }
