@@ -21,4 +21,4 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name = var.network
   address_prefixes     = ["10.0.0.0/24"]
 }
-*?
+*/
