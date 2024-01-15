@@ -16,7 +16,7 @@ resource "azurerm_virtual_network" "vnet" {
 
 # Create a sub_net network
 resource "azurerm_subnet" "subnet" {
-  name                 = "var.subnet"
+  name                 = "var.network"
   resource_group_name  = var.Resource_Group
   virtual_network_name = "var.subnet"
   address_prefixes     = ["10.0.0.0/24"]
