@@ -6,9 +6,9 @@ resource "azurerm_resource_group" "rg" {
 
 # Create a virtual network
 resource "azurerm_virtual_network" "vnet" {
-  
-  name                = var.network
-  address_space       = ["10.0.0.0/16"]
+  count = 4
+  name                = var.network-${count.intex}
+  address_space       = ["10.0.${count.intex}.0/16"]
   location            = var.location
   resource_group_name = var.Resource_Group
 }
@@ -16,9 +16,10 @@ resource "azurerm_virtual_network" "vnet" {
 
 # Create a sub_net network
 resource "azurerm_subnet" "subnet" {
-  name                 = var.subnet
+count = 4
+  name                 = var.subnet-${count.intex}
   resource_group_name  = var.Resource_Group
   virtual_network_name = var.network
-  address_prefixes     = ["10.0.0.0/24"]
+  address_prefixes     = ["10.0.${count.intex}.0/24"]
 }
 
