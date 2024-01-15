@@ -10,3 +10,7 @@ variable "Resource_Group" {
 variable "network" {
 description = "Sub_Net."
 }
+
+variable "subnet" {
+description = "Sub_Net."
+}
