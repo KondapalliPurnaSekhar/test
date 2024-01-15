@@ -19,6 +19,6 @@ resource "azurerm_subnet" "subnet" {
   count                = 4
   name                 = "var.subnet-${count.index}"
   resource_group_name  = var.Resource_Group
-  virtual_network_name = azurerm_virtual_network.vnet.name
+  virtual_network_name = "azurerm_virtual_network.vnet.name"
   address_prefixes     = ["10.0.${count.index}.0/24"]
 }
