@@ -13,7 +13,6 @@ resource "azurerm_virtual_network" "vnet" {
   resource_group_name = var.Resource_Group
 }
 
-
 # Create a sub_net network
 resource "azurerm_subnet" "subnet" {
   count = 2
