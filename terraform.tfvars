@@ -1,3 +1,4 @@
 location = "East US"
 Resource_Group = "My_RG"
 network = "DEV"
+subnet = "tst"
