@@ -34,3 +34,8 @@ output "RG_Name" {
   description = "RG name"
   value       = var.Resource_Group
 }
+
+output "Location" {
+  description = "RG name"
+  value       = var.location
+}
