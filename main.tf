@@ -15,7 +15,7 @@ depends_on = [
     azurerm_resource_group.rg
   ]
 }
-
+/*
 # Create a sub_net network
 resource "azurerm_subnet" "subnet" {
   count = 4
@@ -28,4 +28,9 @@ depends_on = [
     azurerm_resource_group.rg
   ]
 }
+*/
 
+output "RG_Name" {
+  description = "RG name"
+  value       = var.Resource_Group
+}
