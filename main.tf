@@ -25,7 +25,8 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = ["10.0.${count.index}.0/24"]
 
 depends_on = [
-    azurerm_resource_group.rg
+    azurerm_resource_group.rg,
+azurerm_virtual_network.vnet
   ]
 }
 
